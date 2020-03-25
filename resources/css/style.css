@@ -1,11 +1,11 @@
 body {
     text-align: center;
     image-resolution: 10x10;
-    background: url(bg2.jpg);
+    background: url(../images/bg2.jpg);
     background-size: cover;
     background-position: center;
     color: white;
-    font-family: helvetica;
+    font-family: sans-serif;
   }
   p {
     font-size: 22px;
@@ -20,6 +20,7 @@ body {
     color: white;
   }
   img[id="head"] {
+    padding-top: 100px;
     width: 15%;
     height: 15%;
   }
