@@ -1,27 +1,198 @@
-body {
-    text-align: center;
-    image-resolution: 10x10;
-    background: url(../images/bg2.jpg);
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-family: sans-serif;
-  }
-  p {
-    font-size: 22px;
-  }
-  input {
-    border: 0;
-    padding: 10px;
-    font-size: 18px;
-  }
-  input[type="submit"] {
-    background: lightcoral;
-    color: white;
-  }
-  img[id="head"] {
-    padding-top: 100px;
-    width: 15%;
-    height: 15%;
-  }
+/* ------------------------------------ */
+/* Basic Setup*/
+/* ------------------------------------ */
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------ */
+/*Reusable Components*/
+/* ------------------------------------ */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/*----Headings----*/
+
+h1, h2, h3 {
+  font-weight: 300;
   
+  letter-spacing: 1px;
+}
+
+h1 {
+  word-spacing: 3px;
+  color: rgba(255, 255, 255, 0.905);
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 120%;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+}
+
+h2::after {
+  display: block;
+  height: 3px;
+  background-color: #27b862;
+  content:" ";
+  width: 200px;
+  margin:0 auto;
+  margin-top: 30px;
+}
+
+/*----Paragraphs----*/
+
+.long-copy {
+  display: block;
+  line-height: 145%;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 110%;
+}
+
+.box p {
+  padding: 1%;
+  font-size: 110%;
+}
+
+
+/*----Buttons----*/
+
+.btn:link,
+.btn:visited {  
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color:#27b862;
+  color: #fff;
+  border: 1px solid#27b862;
+  margin-right: 10px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #27b862;
+  color: #27b862;
+}
+
+.btn:hover,
+.btn:active{
+  background-color:#219c53;
+  color: #fff;
+  border: 1px solid #219c53;  
+}
+
+/* ------------------------------------ */
+/*Header*/
+/* ------------------------------------ */
+
+header {
+  background-image: linear-gradient(#00000016,#000000ce), url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  letter-spacing: 1px;
+}
+
+.my-name {
+  font-size: 340%;
+}
+
+.my-jobs {
+  font-size: 200%;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 120%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.4s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #27b862;
+}
+
+/* ------------------------------------ */
+/*About Me*/
+/* ------------------------------------ */
+
+#headshot {
+  margin-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: auto;
+  margin-bottom: 40px;
+}
+
+ion-icon {
+  font-size: 56px;
+  color: #27b862;
+  margin-bottom: 10px;
+}

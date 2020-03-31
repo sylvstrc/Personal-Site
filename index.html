@@ -3,13 +3,61 @@
     <head>
         <title>Sylvester</title>
         <link type="text/css" rel="stylesheet" href="resources/css/style.css">
-        <link href="vendors/css/normalize.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="vendors/css/grid.css">
+        <link type="text/css" rel="stylesheet" href="vendors/css/normalize.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <img src='resources/images/Headshot.png' id="head"></img>
-        <p>Hi I'm Sylvester, an aspiring Software Developer in Vancouver. Let's connect!</p>
-        <input type="email" placeholder="Your email">
-        <input type="submit">
+        <header>
+            <nav> 
+                <div class="row">
+                    <ul class="main-nav">
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Experience</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1 class="my my-name">Sylvester Chenne</h1>
+                <h2 class="my my-jobs">Aspiring Software Engineer and Student</h2>
+                <a class="btn btn-full" href="#">Let's connect</a>
+                <a class="btn btn-ghost" href="#">Tell me more</a>
+            </div>
+        </header>
+        <section class="section-aboutme">
+                <h2>Hi, my name is Sylvester and I am an aspiring Software Engineer</h2>
+                <img src="resources/images/yo.jpg" id="headshot">
+                <div class="row">
+                    <p class="long-copy">
+                        Vancouver has been my home my whole life and I want to be a part of the growing tech industry.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3 box">
+                        <ion-icon name="desktop-outline"></ion-icon>
+                        <h3>Tech Enthusiast</h3>
+                        <p>
+                            I have always been facinated by how techcnology enhances our everyday lives. I want to build innovative software that streamlines productivity for businesses and consumers.
+                        </p>
+                    </div>
+                    <div class="col span-1-of-3 box">
+                        <ion-icon name="image-outline"></ion-icon>
+                        <h3>Photographer</h3>
+                        <p>
+                            Photography is a passsion of mine and it allows me to portray the world through a unique lens. This hobby has sparked an artisitic side in me and interest in the visual aspect of designing interfaces.
+                        </p>
+                    </div>
+                    <div class="col span-1-of-3 box">
+                        <ion-icon name="school-outline"></ion-icon>
+                        <h3>Student</h3>
+                        <p>
+                           I am currently in my third year at the University of British Columbia doing a combined major in business and computer science. Being a student has taught me to become a life-long learner and to challenge new ideas. 
+                        </p>
+                </div>
+            </div>   
+        </section>
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     </body>
 </html>
