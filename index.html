@@ -2,39 +2,52 @@
 <html lang="en">
     <head>
         <title>Sylvester</title>
-        <link type="text/css" rel="stylesheet" href="resources/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="vendors/css/grid.css">
         <link type="text/css" rel="stylesheet" href="vendors/css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="vendors/css/animate.css">
+        <link type="text/css" rel="stylesheet" href="resources/css/style.css">
+        <link type="text/css" rel="stylesheet" href="resources/css/queries.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="resources/favicons/site.webmanifest">
+        <link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="resources/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
         <header>
             <nav> 
                 <div class="row">
-                    <ul class="main-nav">
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">Experience</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact Me</a></li>
-                    </ul>
+                  <img src="resources/images/logo.png" alt="sylvester chenne" class="logo">
+                  <img src="resources/images/logo-black.png" alt="sylvester chenne" class="logo-black">
+                  <ul class="main-nav js--main-nav">
+                    <li><a class ="js--scroll-to-aboutme">About</a></li>
+                    <li><a class="js--scroll-to-portfolio">Portfolio</a></li>
+                    <li><a class="js--scroll-to-skills">Skills</a></li>
+                    <li><a class="js--scroll-to-contact">Contact</a></li>
+                  </ul>
+                  <a class="mobile-nav-icon js--nav-icon"><ion-icon name="menu" class="menu"></ion-icon></a>
                 </div>
             </nav>
             <div class="hero-text-box">
-                <h1 class="my my-name">Sylvester Chenne</h1>
-                <h2 class="my my-jobs">Aspiring Software Engineer and Student</h2>
-                <a class="btn btn-full" href="#">Let's connect</a>
-                <a class="btn btn-ghost" href="#">Tell me more</a>
+                <h1 class="my my-name">Sylvester Chenne<br>Student | Software Engineer</h1>
+                <a class="btn btn-full js--scroll-to-contact" href="#">Let's connect</a>
+                <a class="btn btn-ghost js--scroll-to-aboutme" href="#">Tell me more</a>
             </div>
         </header>
-        <section class="section-aboutme">
+        <section class="section-aboutme js--section-aboutme">
                 <h2>Hi, my name is Sylvester and I am an aspiring Software Engineer</h2>
-                <img src="resources/images/yo.jpg" id="headshot">
                 <div class="row">
                     <p class="long-copy">
                         Vancouver has been my home my whole life and I want to be a part of the growing tech industry.
                     </p>
                 </div>
-                <div class="row">
+                <div class="row js--wp-1">
                     <div class="col span-1-of-3 box">
                         <ion-icon name="desktop-outline"></ion-icon>
                         <h3>Tech Enthusiast</h3>
@@ -58,6 +71,274 @@
                 </div>
             </div>   
         </section>
+        <section class="section-plants">
+            <ul class="plants-showcase clearfix">
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/1.jpg" alt="">
+                  </figure>
+              </li>
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/2.jpg" alt="">
+                  </figure>
+              </li>
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/3.jpg" alt="">
+                  </figure>
+              </li>
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/4.jpg" alt="">
+                  </figure>
+              </li>
+            </ul>
+            <ul class="plants-showcase clearfix">
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/5.jpg" alt="">
+                  </figure>
+              </li>
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/6.jpg" alt="">
+                  </figure>
+              </li>
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/7.jpg" alt="">
+                  </figure>
+              </li>
+              <li>
+                  <figure class="plant-photo">
+                      <img src="resources/images/plants/8.jpg" alt="">
+                  </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="section-portfolio js--section-portfolio">
+            <div class="row">
+              <h2 class="portfolio-title">Experience & Projects</h2>
+            </div>
+            <div class="row">
+              <div class="col span-1-of-4">
+                  <div class="project-box js--wp-3">
+                      <div class="project-img">
+                          <h3>IT Systems Intern - ECENTA</h3>
+                      </div>
+                      <div>
+                          <p class="project-desc">ECENTA is a company that specializes in SAP consulting and implementations. I worked with a scrum team to develop scripts to automate input parsing, compatibility checking, and validation, carry out user acceptance testing, and design functional solutions for business requirements.</p>
+                          <br><p class="tech">Python, Agile, Jira, UAT</p>    
+                      </div>
+                      <div>
+                          <a href="https://www.ecenta.com/en/" class="btn btn-ghost">More Info</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col span-1-of-4">
+                <div class="project-box">
+                    <div class="project-img">
+                        <h3>Dank Meme<br>Generator</h3>
+                    </div>
+                    <div>
+                        <p class="project-desc">The Dank Meme Generator is a web-application that enables users to view and select from internet-trending meme templates to create and customize their own memes.</p>
+                        <br><p class="tech">JavaScript ES6, Reactjs</p>                            
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-ghost">View</a>
+                    </div>
+                </div>
+             </div>
+              <div class="col span-1-of-4">
+                  <div class="project-box">
+                      <div class="project-img">
+                          <h3>Personal Portfolio Site</h3>
+                      </div>
+                      <div>
+                          <p class="project-desc">My very own responsive portfoilio site optimizied for both mobile and desktop viewing with various graphics created in Adobe Photoshop. Made with blood, sweat and tears.</p>
+                          <br><p class="tech">HTML5, CSS3, JavaScript, JQuery, PHP</p>    
+                      </div>
+                      <div>
+                          <a href="#" class="btn btn-ghost">View</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col span-1-of-4">
+                  <div class="project-box">
+                      <div class="project-img">
+                          <h3>Spotify<br>Analytics</h3>
+                      </div>
+                      <div>
+                          <p class="project-desc">A web application to view your very own Spotify user statistics. <br>Coming Soon!</p>
+                          <br><p class="tech">Node, JavaScript ES6, MongoDB, HTML5, CSS3</p>    
+                      </div>
+                      <div>
+                          <a class="btn btn-ghost">Coming Soon</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+          <section class="section-skills js--section-skills">
+            <h2 class="skills-title" >Technologies, Tools & Frameworks</h2>
+            <div class="row js--wp-2" > 
+                    <ul class="dock">
+                        <li>
+                          <a title="JavaScript">
+                            <img src="resources/images/icons/javascript.png" alt="JavaScript"/>
+                        </a>
+                        </li>
+                        <li>
+                          <a title="CSS">
+                            <img src="resources/images/icons/css.png" alt="CSS" />
+                          </a>
+                        </li>
+                        <li>
+                          <a title="HTML5">
+                            <img src="resources/images/icons/html.png" alt="Follow me on Twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a title="Java">
+                            <img src="resources/images/icons/java.png" alt="Java" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" title="TypeScript">
+                            <img src="resources/images/icons/ts.png" alt="TypeScript" />
+                          </a>
+                        </li>
+                        <li>
+                          <a title="Jira">
+                            <img src="resources/images/icons/jira.png" alt="Jira" />
+                          </a>
+                        </li>
+                        <li>
+                            <a title="SQL">
+                              <img src="resources/images/icons/SQL.png" alt="SQL" />
+                            </a>
+                          </li>
+                          <li>
+                            <a title="JQuery">
+                              <img src="resources/images/icons/jquery.png" alt="jquery" />
+                            </a>
+                          </li>
+                          <li>
+                            <a title="Nodejs">
+                              <img src="resources/images/icons/node.png" alt="Nodejs" />
+                            </a>
+                          </li>
+                          <li>
+                            <a title="Reactjs">
+                              <img src="resources/images/icons/react.png" alt="React" />
+                            </a>
+                          </li>
+                          <li>
+                            <a title="C++">
+                              <img src="resources/images/icons/cpp.png" alt="cpp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a title="Python">
+                              <img src="resources/images/icons/python.png" alt="python" />
+                            </a>
+                          </li>
+                          <li>
+                            <a title="Git">
+                              <img src="resources/images/icons/git.png" alt="git" />
+                            </a>
+                          </li>
+                          <li>
+                            <a title="GitHub">
+                              <img src="resources/images/icons/github.png" alt="github" />
+                            </a>
+                          </li>
+                      </ul>
+                    </div>
+          </section>
+          <section class="section-form js--section-contact">
+            <div class="row">
+                <h2>Let's Connect!</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you get here?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                                <option value="friends" selected>Friends</option>
+                                <option value="search">Search engine</option>
+                                <option value="ad">GitHub</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Enter a message</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send" class="btn btn-full js--submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Top</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="https://github.com/sylvstrc"><ion-icon name="logo-github"></ion-icon></ion-icon></a></li>
+                        <li><a href="https://www.linkedin.com/in/sylvesterchenne/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                        <li><a href="https://www.instagram.com/sylvstrc/?hl=en"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="mailto:sylvesterchenne@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>Copyright &copy; 2020 by Sylvester Chenne. All rights reserved.</p>
+            </div>
+        </footer>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+        <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="resources/js/scripts.js"></script>
     </body>
 </html>
+
