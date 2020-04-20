@@ -95,7 +95,7 @@ h2::after {
 .btn,
 .btn:link,
 .btn:visited,
-input[type=submit] {  
+input[type=submit] {
   margin-top: 10px;
   display: inline-block;
   padding: 10px 30px;
@@ -104,6 +104,11 @@ input[type=submit] {
   border-radius: 200px;
   -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
   transition: background-color 0.4s, border 0.4s, color 0.4s;
+  behavior: url(../../vendors/pie/PIE.htc);
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
 }
 
 .btn-full:link,
@@ -137,6 +142,8 @@ input[type=submit]:active {
 /* ------------------------------------ */
 
 header {
+  background-image: -webkit-gradient(linear,left top, left bottom,from(#00000090),to(#00000082)), url(../images/bg2.jpg);
+  background-image: -webkit-linear-gradient(#00000090,#00000082), url(../images/bg2.jpg);
   background-image: linear-gradient(#00000090,#00000082), url(../images/bg2.jpg);
   background-size: cover;
   background-position: center;
@@ -418,6 +425,7 @@ header {
   background-size: cover;
   background-position: bottom;
   color: #fff;
+  background-attachment: fixed;
 }
 
 .section-form h2 {
@@ -432,7 +440,8 @@ header {
 input[type=text],
 input[type=email],
 select,
-textarea {
+textarea,
+.placeholder {
   width: 100%;
   padding: 7px;
   border-radius: 3px;
@@ -441,10 +450,6 @@ textarea {
 
 textarea {
   height: 100%;
-}
-
-input[type=checkbox] {
-  margin: 10px 5px 10px 0;
 }
 
 *:focus {

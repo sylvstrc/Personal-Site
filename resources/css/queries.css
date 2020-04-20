@@ -27,6 +27,11 @@
 /* phones to ipads: from 481 to 767 px*/
 @media only screen and (max-width: 767px) {
 
+    header, .section-form {
+        background-size: auto 1000px;
+        background-position: top right;
+    }
+
     body {font-size: 16px;}
     section {padding: 30px 0;}
     .section-plants {padding: 0;}

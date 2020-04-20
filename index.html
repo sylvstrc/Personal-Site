@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Sylvester</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="vendors/css/grid.css">
         <link type="text/css" rel="stylesheet" href="vendors/css/normalize.css">
@@ -18,11 +19,11 @@
         <meta name="msapplication-TileColor" content="#00aba9">
         <meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
+        <meta name="description" content="Sylvester Chenne is a third year business and computer undergraduate at the Univeristy in British Columbia. He is passionate about technology and graphic design and aspires to become a Software Engineer.">
     </head>
     <body>
-        <header>
+        <header class="js--section-header">
             <nav>
-                <a name="top"></a> 
                 <div class="row">
                   <img src="resources/images/logo.png" alt="sylvester chenne" class="logo">
                   <img src="resources/images/logo-black.png" alt="sylvester chenne" class="logo-black">
@@ -158,7 +159,7 @@
                       </div>
                       <div>
                           <p class="project-desc">My very own responsive portfoilio site optimizied for both mobile and desktop viewing with various graphics created in Adobe Photoshop. Made with blood, sweat and tears.</p>
-                          <br><p class="tech">HTML5, CSS3, JavaScript, JQuery, PHP, search engine optimization</p>    
+                          <br><p class="tech">HTML5, CSS3, JavaScript, JQuery, PHP, MySQL <p>    
                       </div>
                       <div>
                           <a href="https://github.com/sylvstrc/Personal-Site" class="btn btn-ghost">View</a>
@@ -262,22 +263,25 @@
             <div class="row">
                 <h2>Let's Connect!</h2>
             </div>
+
+
             <div class="row">
-                <form method="post" action="#" class="contact-form">
+                <iframe name="prevent_refresh" style="display:none;"></iframe>
+                <form method="post" onsubmit="return save_detail();" target="prevent_refresh">
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label for="name">Name</label>
+                            <label for="name">Name *</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                            <input type="text" name="name" id="name" placeholder="Your name">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label for="email">Email</label>
+                            <label for="email">Email *</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                            <input type="email" name="email" id="email" placeholder="Your email">
                         </div>
                     </div>
                     <div class="row">
@@ -285,10 +289,11 @@
                             <label for="find-us">How did you get here?</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <select name="find-us" id="find-us">
-                                <option value="friends" selected>Friends</option>
+                            <select name="reason" id="reason">
+                                <option class="placeholder" disabled selected value>Select an option</option>
+                                <option value="friends">Friends</option>
                                 <option value="search">Search engine</option>
-                                <option value="ad">GitHub</option>
+                                <option value="github">GitHub</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -298,7 +303,7 @@
                             <label>Enter a message</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="Your message"></textarea>
+                            <textarea name="message" id="message" placeholder="Your message"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -309,7 +314,16 @@
                             <input type="submit" value="Send" class="btn btn-full js--submit">
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <label id="contact_response"></label>
+                        </div>
+                    </div>
                 </form>
+
             </div>
         </section>
         <footer>
@@ -317,12 +331,12 @@
                 <div class="col span-1-of-2">
                     <ul class="footer-nav">
                         <li><a href="#" class="js--scroll-to-aboutme">About</a></li>
-                        <li><a href="#top">Top</a></li>
+                        <li><a href="#" class='js--scroll-to-top'>Top</a></li>
                     </ul>
                 </div>
                 <div class="col span-1-of-2">
                     <ul class="social-links">
-                        <li><a href="https://github.com/sylvstrc"><ion-icon name="logo-github"></ion-icon></ion-icon></a></li>
+                        <li><a href="https://github.com/sylvstrc"><ion-icon name="logo-github"></ion-icon></a></li>
                         <li><a href="https://www.linkedin.com/in/sylvesterchenne/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
                         <li><a href="https://www.instagram.com/sylvstrc/?hl=en"><ion-icon name="logo-instagram"></ion-icon></a></li>
                         <li><a href="mailto:sylvesterchenne@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
@@ -333,13 +347,22 @@
                 <p>Copyright &copy; 2020 by Sylvester Chenne. All rights reserved.</p>
             </div>
         </footer>
-        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
         <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+        <script src="vendors/js/selectivizr-min.js"></script>
+        <script src="vendors/js/selectivizr.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
         <script src="resources/js/scripts.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163372875-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-163372875-1');
+        </script>
     </body>
 </html>
 
